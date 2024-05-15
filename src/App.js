@@ -25,6 +25,18 @@ function App() {
         setTodos(updatedTodos);
     };
 
+    function addTodos() {
+        const newTodos = [];
+        for (let i = 0; i < 100; i++) {
+            newTodos.push({
+                id: todos.length + i + 1,
+                title: 'New todo ' + (todos.length + i + 1),
+                completed: false
+            });
+        }
+        setTodos(prevTodos => [...prevTodos, ...newTodos]);
+    }
+
     return (
         <div>
             <h1>TODO APP</h1>
@@ -33,6 +45,7 @@ function App() {
                     <TodoItem key={todo.id} todo={todo} onToggleCompleted={handleToggleCompleted} />
                 ))}
             </div>
+            <button onClick={() => addTodos()}>Add 100 Todos</button>
         </div>
     );
 }
