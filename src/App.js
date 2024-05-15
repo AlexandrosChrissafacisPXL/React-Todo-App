@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function App() {
     const [todos, setTodos] = useState([
-        { id: 1, title: 'Install React', completed: false },
+        { id: 1, title: 'Install React', completed: true },
         { id: 2, title: 'Style app', completed: false },
         { id: 3, title: 'Finish service functionality', completed: false },
         { id: 4, title: 'Setup API', completed: false },

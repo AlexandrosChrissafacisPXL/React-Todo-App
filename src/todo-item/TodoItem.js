@@ -5,7 +5,7 @@ const TodoItem = ({ todo, onToggleCompleted  }) => {
         <div style={{ display: 'flex', alignItems: 'center', width:'50%', border:'black 1px solid' }}>
             <h5 style={{ width: '10%', marginLeft: '20px' }}>{todo.id}</h5>
             <h5 style={{ width: '80%' }}>{todo.title}</h5>
-            <input style={{ width: '10%' }} type="checkbox" c
+            <input style={{ width: '10%' }} type="checkbox"
                    checked={todo.completed}
                    onChange={() => {onToggleCompleted(todo.id);}} />
         </div>
